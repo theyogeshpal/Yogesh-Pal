@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Er. Yogesh Pal</title>
+    <title>Yogesh Pal | Full Stack Developer & .NET Core Specialist</title>
+<meta name="description" content="Yogesh Pal - Full Stack Developer specializing in ASP.NET Core MVC, C#, JavaScript, HTML, CSS. Expert in web development with proven track record in creating dynamic applications.">
+<meta name="keywords" content="Yogesh Pal, Full Stack Developer, ASP.NET Core, C#, JavaScript, HTML, CSS, Web Developer, Portfolio, Bareilly Developer">
+<meta name="author" content="Yogesh Pal">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yogesh-pal.netlify.app/">
+<meta property="og:title" content="Yogesh Pal - Full Stack Developer Portfolio">
+<meta property="og:description" content="Professional Full Stack Developer with expertise in ASP.NET Core MVC, creating dynamic web applications and delivering seamless user experiences.">
+<meta property="og:image" content="./images/The-Yogesh-Pal.jpg">
+<meta property="og:url" content="https://yogesh-pal.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yogesh Pal - Full Stack Developer">
+<meta name="twitter:description" content="Expert Full Stack Developer specializing in modern web technologies">
+<meta name="twitter:image" content="./images/The-Yogesh-Pal.jpg">
     <link rel="shortcut icon" href="./images/The-Yogesh-Pal.jpg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             padding: 0%;
             margin: 0%;
             background-color: rgb(255, 255, 255);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow-x: hidden;
         }
-
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+            animation: floatBg 15s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes floatBg {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(2deg); }
+            66% { transform: translateY(20px) rotate(-1deg); }
+        }
         .nav-item a::after {
             content: "  ";
             height: 0.3rem;
@@ -22,25 +60,16 @@
             display: flex;
             width: 0;
             transition: all 0.4s ease-in-out;
-            
         }
-
         .nav-item a:hover::after{
             width: 100%;
         }
-        
-       
-
         .navbar-brand {
-            
             padding: 0;
             position: relative;
             font-size: 3rem;
-            
         }
-     
         .navbar-brand:before {
-            
             content: "𝕐𝕠𝕘𝕖𝕤𝕙 ℙ𝕒𝕝";
             position: absolute;
             width: 100%;
@@ -49,7 +78,6 @@
             overflow:hidden;
             animation: animate 2s infinite;
         }
-
          @keyframes animate {
             0% {
             height: 25%;
@@ -67,33 +95,45 @@
             height: 25%;
             }
         }
-
-       
         .head {
             background-color: rgb(27, 23, 23);
             height: 4.9rem;
             position: sticky;
             top: 0;
             z-index: 999;
-            
         }
         .dropmenu{
-            
-            background-color: rgb(27, 23, 23);
-           
-            
+            background-color: rgb(27, 23, 23); 
         }
         .dropmenu li a {
             font-size: 1rem;
         }
-        
-        
         .intro {
             height: 48rem;
             background-color: rgb(27, 23, 23);
+            position: relative;
+            overflow: hidden;
         }
-
-
+        
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(255, 193, 7, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 30%);
+            animation: sparkle 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
         #name {
             color: yellow;
             font-size: 5rem;
@@ -101,14 +141,12 @@
             text-align: start;
             margin-left: 10%;
         }
-
         .paraforname {
             padding: 0;
             margin: 0;
             text-align: start;
             margin-left: 10%;
         }
-
         #web {
             margin: 0.5rem;
             font-weight: 700;
@@ -121,12 +159,10 @@
             text-align: start;
             width: 100%;
             margin-left: 10%;
-            
             font-size: 18;
         }
         .developerimg {
             height: 49vmin;
-            
             border: 2vmin solid rgb(249, 87, 29);
             border-radius: 50%;
             animation: revolve-reverse;
@@ -142,35 +178,28 @@
                 transform: rotate(-180deg);
             }
         }
-        
         .firstring {
             border: 0.1rem dashed white;
             height: 60vmin;
             width: 60vmin;
-            
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             animation: revolve;
-            
             animation-duration: 20s;
             animation-iteration-count: infinite;
         }
-
         @keyframes revolve {
             0% {
                 transform: rotate(0deg);
-                
             }
             100% {
                 transform: rotate(180deg);
-                
             }
         }
         .secondring {
             border: 0.1rem dashed white;
-            
             height: 55vmin;
             width:  55vmin;
             border-radius: 50%;
@@ -178,7 +207,6 @@
             justify-content: center;
             align-items: center;
         }
-
         .social {
             width: 12vmin;
             position: fixed;
@@ -191,8 +219,7 @@
             justify-content: space-around;
             align-items: center;
             align-content: center;
-            flex-direction: column;
-             
+            flex-direction: column; 
         }
         .social i {
             transition: all 0.1s ease;
@@ -203,20 +230,36 @@
         }
         .social i:hover {
             background-color: white;
-            
             transform: scale(1.5);
             border-radius: 50%;
             line-height: 4vmin;
-            
         }
-
         .qualification {
             padding: 8vmin 0vmin 8vmin 0vmin;
             font-size: 1rem;
             gap: 2rem;
-            background-color: white;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            position: relative;
         }
-
+        
+        .qualification::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(223, 23, 97, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
+            animation: gentleFloat 12s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
         .qualification-head {
             text-decoration: underline 0.1rem solid red;
             font-weight: 900;
@@ -224,12 +267,8 @@
         }
         .qualification-span {
             color: #DF1761;
-           font-weight: 700;
-            
+           font-weight: 700;     
         }
-
-      
-
         .social-1 {
             position: fixed;
             z-index: 99;
@@ -237,25 +276,18 @@
             bottom: 5vmin;
             width: 10vmin;
             gap: 2vmin;
- 
         }
-
         .social-1 img {
             color: green;
             height:6.5vmin;
             width: 6.5vmin;
             filter: drop-shadow(2px 2px 2px black);
-            
         }
         .img2 img{
-            
             height: 6vmin;
-            width:  6vmin;
-           
+            width:  6vmin;  
         }
-
-        .work-head::after {
-            
+        .work-head::after { 
             content: " ";
             height: 0.3rem;
             background-color: rgb(207, 46, 46);
@@ -264,175 +296,193 @@
             width: 8rem;
             transition: all 0.4s ease-in-out;
         }
-        
-
-        
-
         .project-cards {
-            
             transition: all 0.2s ease-in-out;
         }
-
+        
         .project-cards:hover {
             scale: 1.05;
             box-shadow: 3px 3px 10px rgb(0, 0, 0);
         }
-        
         .visit-arr {
             position: relative;
-            
             margin-top: 0;
             margin-bottom: 0;
-            font-weight: 900;
-            
+            font-weight: 900;   
         }
-
         .contact {
-            background-color: rgb(255, 255, 255);
-            
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(223, 23, 97, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(0, 255, 255, 0.03) 0%, transparent 50%);
+            animation: subtleMove 10s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes subtleMove {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(10px); }
         }
         .contact form{
-            gap: 2vmin;
-           
+            gap: 2vmin;  
         }
-
         .inp {
-
             height: 8vmin;
             border-radius: 0px;
             border: 0;
             text-align: start;
-            padding-left: 20px;
-            
-            
+            padding-left: 20px;    
         }
         .inp:hover {
             border: none;
             border-style: none;
         }
-
         .a1 {
             width: 38.3rem;
             background-color: rgb(219, 215, 215);
         }
-
-        
-
         .about {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 700;
-    
-    padding-top: 70px;
-    color: #DF1761;
-}
-
-.hr {
-    width: 60%;
-    margin: auto;
-    border: 2px solid #DF1761;
-    border-radius: 5px;
-}
-
-.about-text-container {
-    width: 80%;
-    margin: auto;
-    text-align: justify;
-    margin-top: 20px;
-}
-
-.about-text-container p {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-    color: rgb(0, 0, 0);
-    margin-top: 10px;
-}
-
-.about-text-container p span {
-    color: #DF1761;
-    font-weight: 800;
-}
-
-.about-text-container ul {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #DF1761;
-    display: flex;
-}
-
-.about-text-container ul li {
-    margin-right: 20px;
-    list-style: square;
-    list-style-position: inside;
-}
-
-.lis {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-}
-
-.contact-left {
-    width: 100%;
-    height: 100%;
-}
-.contact-left h1{
-    text-align: center;
-    margin-top: 0px;
-    color: #DF1761;
-    font-size: 50px;
-}
-.contact-left p{
-    text-align: justify;
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 30px;
-    padding: 0 30px;
-}
-
-.rpr {
-    padding-top: 50px;
-}
-.projects {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    /* background-color: yellow; */
-    row-gap: 25px;
-    padding: 30px;
-    margin-bottom: 50px;
-}
-
-.project-cards {
-    width: 22%;
-}
-
-.form {
-    margin-top: 100px;
-}
-   
-
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            
+            padding-top: 70px;
+            color: #DF1761;
+        }
+        .hr {
+            width: 60%;
+            margin: auto;
+            border: 2px solid #DF1761;
+            border-radius: 5px;
+        }
+        .about-text-container {
+            width: 80%;
+            margin: auto;
+            text-align: justify;
+            margin-top: 20px;
+        }
+        .about-text-container p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            color: rgb(0, 0, 0);
+            margin-top: 10px;
+        }
+        .about-text-container p span {
+            color: #DF1761;
+            font-weight: 800;
+        }
+        .about-text-container ul {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #DF1761;
+            display: flex;
+        }
+        .about-text-container ul li {
+            margin-right: 20px;
+            list-style: square;
+            list-style-position: inside;
+        }
+        .lis {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+        }
+        .contact-left {
+            width: 100%;
+            height: 100%;
+        }
+        .contact-left h1{
+            text-align: center;
+            margin-top: 0px;
+            color: #DF1761;
+            font-size: 50px;
+        }
+        .contact-left p{
+            text-align: justify;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 30px;
+            padding: 0 30px;
+        }
+        .rpr {
+            padding-top: 50px;
+        }
+        .projects {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 25px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+        .project-cards {
+            width: 22%;
+        }
+        .form {
+            margin-top: 100px;
+        }
+        @media (max-width: 1200px) {
+            .navbar-brand {
+                font-size: 2.5rem;
+            }
+            #name {
+                font-size: 4rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .intro {
+                height: auto;
+                min-height: 40rem;
+                padding: 2rem 0;
+            }
+            .firstring {
+                height: 50vmin;
+                width: 50vmin;
+            }
+            .secondring {
+                height: 45vmin;
+                width: 45vmin;
+            }
+            .developerimg {
+                height: 40vmin;
+            }
+            .social {
+                bottom: 10rem;
+            }
+        }
+        
         @media (max-width:769px) {
             .social {
                 display: none;
             }
             .nav-item a:hover::after{
-            width: 0%;
-        }
+                width: 0%;
+            }
             .intro {
-            height: 25rem;
-            background-color: rgb(27, 23, 23);
+                height: auto;
+                min-height: 30rem;
+                padding: 1rem 0;
             }
             .firstring {
                 border: 0rem dashed white;
                 height: 45vmin;
-                width:  45vmin;
-                
+                width: 45vmin;
             }
             .secondring {
                 border: 0rem dashed white;
@@ -443,77 +493,89 @@
                 font-size: 15px;
             }
             #name {
-                font-size: 30px;
+                font-size: 2.5rem;
+                margin-left: 0;
+                text-align: center;
+            }
+            #web {
+                margin-left: 0;
+                text-align: center;
+                font-size: 1.2rem;
+            }
+            .paraforname {
+                margin-left: 0;
+                text-align: center;
+            }
+            .resume {
+                margin-left: 0;
+                text-align: center;
             }
             .developerimg {
                 height: 100%;
                 border: 5px solid orangered;
             }
             .qualification {
-             display: flex;
-             flex-direction: column;
+                display: flex;
+                flex-direction: column;
+                padding: 4rem 1rem;
             }
             .list {
                 width: 100%;
+                padding: 0 1rem;
             }
-             .about-text-container ul {
+            .about-text-container {
+                width: 95%;
+                padding: 0 1rem;
+            }
+            .about-text-container ul {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr) ;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
             }
             .ab-b {
-                /* background-color: red; */
-                padding: 0px 30px 30px 30px;
-                
+                padding: 0px 15px 30px 15px;
             }
-            
             .rpr {
                 padding-top: 20px;
             }
             .projects {
-                
-                /* background-color: yellow; */
                 row-gap: 30px;
                 padding: 30px 10px;
                 margin-bottom: 50px;
             }
-
             .project-cards {
-                width: 45%;
-            }
-
-            .list {
-                
-                padding: 0;
+                width: 48%;
             }
             .dropmenu{
-            
-            background-color: rgb(136, 49, 49);
-            margin-top: -40px;
-        
-            
-        }
-        .navbar-nav,
-        .navbar-toggler
-        {
-            display: none;
-        }
-        
-
-            
-        }
-        @media (max-width:426px) {
-            .social {
+                background-color: rgb(136, 49, 49);
+                margin-top: -40px;
+            }
+            .navbar-nav,
+            .navbar-toggler {
                 display: none;
             }
+            .a1 {
+                width: 100%;
+                max-width: 500px;
+            }
+            .contact-left p {
+                padding: 0 15px;
+            }
+        }
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 1.8rem;
+                margin: 0px auto;
+            }
             .intro {
-            height: 35rem;
-            background-color: rgb(27, 23, 23);
+                height: auto;
+                min-height: 35rem;
+                padding: 1rem 0;
             }
             .firstring {
                 border: 0rem dashed white;
-                height: 70vmin;
-                width:  70vmin;
-                
+                height: 60vmin;
+                width: 60vmin;
             }
             .secondring {
                 border: 0rem dashed white;
@@ -521,88 +583,132 @@
                 width: 100%;
             }
             .paraforname{
-                font-size: 15px;
+                font-size: 14px;
             }
             #name {
-                font-size: 30px;
+                font-size: 2rem;
+                margin-left: 0;
+                text-align: center;
+            }
+            #web {
+                margin-left: 0;
+                text-align: center;
+                font-size: 1rem;
+            }
+            .paraforname {
+                margin-left: 0;
+                text-align: center;
+            }
+            .resume {
+                margin-left: 0;
+                text-align: center;
             }
             .developerimg {
                 height: 100%;
-                border: 5px solid orangered;
+                border: 4px solid orangered;
+            }
+            .about {
+                font-size: 2rem;
+                padding-top: 40px;
+            }
+            .about-text-container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            .about-text-container p {
+                font-size: 16px;
+                line-height: 24px;
             }
             .about-text-container ul {
-                width: 100%;
-               
-                padding: 0;
                 display: grid;
-                grid-template-columns: repeat(1, 1fr) ;
-                }
-
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                font-size: 16px;
+            }
+            .qualification {
+                padding: 2rem 0.5rem;
+            }
+            .qualification-head {
+                font-size: 1.2rem;
+            }
+            .lis {
+                font-size: 16px;
+                line-height: 24px;
+            }
             .pr {
                 padding: 10px;
-            }  
+            }
             .rpr {
-                padding-top: 30px;
+                padding-top: 20px;
             }
             .projects {
-                padding: 0px;
-              
+                padding: 20px 5px;
             }
-
             .project-cards {
-                width: 85%;
+                width: 90%;
+                margin-bottom: 20px;
             }
-
             .list {
-                
-                padding: 0px 18px;
+                padding: 0px 10px;
                 text-align: justify;
-            } 
-
+            }
             .dropmenu{
-            
-            background-color: rgb(27, 23, 23);
-            margin-top: -18px;
-            
-        }
-        
+                background-color: rgb(27, 23, 23);
+                margin-top: -18px;
+            }
             .sub i {
                 display: none;
             }
-            
-
+            .a1 {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            .contact-left h1 {
+                font-size: 2rem;
+            }
+            .contact-left p {
+                padding: 0 10px;
+                font-size: 14px;
+            }
+            .form {
+                margin-top: 50px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://www.ilcorrieredellacitta.com/wp-content/uploads/2023/06/whatapp-1-fb.png" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yogesh Pal",
+  "jobTitle": "Full Stack Developer",
+  "url": "https://yogesh-pal.netlify.app/",
+  "sameAs": [
+    "https://www.linkedin.com/in/pal-yogesh",
+    "https://github.com/theyogeshpal"
+  ]
+}
+</script>
 </head>
 <body>
-    
     <div class="container-fluid">
         <div class="row head">
             <div class="col-sm-12 navbr m-0">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid navbar-m gap-sm-5">
-                        
-                        
-                            <a class="navbar-brand text-white" style="font-family: cursive; font-size: 40px;" href="#">𝕐𝕠𝕘𝕖𝕤𝕙 ℙ𝕒𝕝</a>
+                            <a class="navbar-brand text-white " style="font-family: cursive; font-size: 40px;" href="#">𝕐𝕠𝕘𝕖𝕤𝕙 ℙ𝕒𝕝</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span class="navbar-toggler-icon"></span>
                             </button>
-
-                        
-                      
-
                         <div class="collapse navbar-collapse" id="navbarNav">
-
                             <ul class="navbar-nav dropmenu text-center mx-auto w-50 justify-content-around">
                                 <li class="nav-item">
                                 <a class="nav-link text-white fw-bold fs-4" href="#Home">Home</a>
-                               
                                 </li>
                                 <li class="nav-item">
                                 <a class="nav-link text-white fw-bold fs-4" href="#About">About </a>
                                 </li>
-                                
                                 <li class="nav-item">
                                 <a class="nav-link text-white fw-bold fs-4" href="#Project">Projects</a>
                                 </li>
@@ -615,73 +721,42 @@
                 </nav>
             </div>
         </div>
-
         <section id="Home">
-
             <div class="row intro">
-    
                 <div class="social-1 d-flex justify-content-around align-items-center align-content-center flex-column">
-                    <a href="https://wa.me/7817095043" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/016/716/468/non_2x/whatsapp-icon-free-png.png" alt=""></a>
-                    <a class="img2" href="tel:7817095043"><img  src="https://cdn-icons-png.flaticon.com/512/9946/9946313.png" alt=""></a>
-                    
+                    <a href="https://wa.me/7817095043" target="_blank" aria-label="Contact via WhatsApp"><img src="https://static.vecteezy.com/system/resources/previews/016/716/468/non_2x/whatsapp-icon-free-png.png" alt="WhatsApp Contact"></a>
+                    <a class="img2" href="tel:7817095043" aria-label="Call Yogesh Pal"><img  src="https://cdn-icons-png.flaticon.com/512/9946/9946313.png" alt="Phone Contact"></a>
                 </div>
-    
-                <div class="col-sm-6 h-sm-100 d-flex flex-wrap gap-0 justify-content-around align-content-center align-items-center text-center text-white">
-                    <p class="w-100 paraforname">HI THERE &#128075 I'M</p>
-                    <h1 id="name">Yogesh Pal</h1>
-                    <p id="web">A FULL STACK DEVELOPER</p>
-                    <p class="paraforname w-100 mb-3">
-                        <i class="fa-solid fa-phone"></i> +91 7817095043
-                        <br>   
-                        <i class="fa-solid fa-envelope"></i> yogeshpal1309@gmail.com
-                    </p>
-                    <p class=" resume">
+                <div class="col-sm-6 h-sm-100 d-flex flex-wrap gap-0 justify-content-around  align-content-center align-items-center text-center text-white" data-aos="fade-right">
+                    <p class="w-100 paraforname" data-aos="fade-up" data-aos-delay="200">HI THERE &#128075 I'M</p>
+                    <h1 id="name" data-aos="fade-up" data-aos-delay="400">Yogesh Pal</h1>
+                    <p id="web" data-aos="fade-up" data-aos-delay="600">A FULL STACK DEVELOPER</p>
+                    <p class="paraforname w-100 mb-3" data-aos="fade-up" data-aos-delay="800"><i class="fa-solid fa-phone"></i> +91 7817095043 <br> <i class="fa-solid fa-envelope"></i> yogeshpal1309@gmail.com</p>
+                    <p class=" resume" data-aos="fade-up" data-aos-delay="1000">
                         <a href="./images/Yogesh-Pal.pdf" class="btn btn-outline-primary rounded-pill" download="Yogesh_Pal_CV.pdf" target="_blank" >Download my CV <i class="fa-solid fa-download"></i></a>
-    
                     </p>
-                </div>
-    
-                
+                </div> 
                 <div class="col-sm-5 h-sm-100 text-center d-flex justify-content-center align-items-center image-developer text-white">
                     <div class="firstring">
-                        <div class="secondring mm-0 p-0">
-                            
-                            <img class="developerimg p-0 m-0" src="./images/The-Yogesh-Pal.jpg" alt="">
+                        <div class="secondring mm-0 p-0">              
+                            <img class="developerimg p-0 m-0" src="./images/The-Yogesh-Pal.jpg" alt="Yogesh Pal - Full Stack Developer Profile Picture">
                         </div>
                     </div>
-    
                 </div>
-    
                 <div class="social">
-                    <a href="https://www.linkedin.com/in/pal-yogesh" target="_blank"><i class="fa-brands fs-5 fa-linkedin-in"></i></a>
-                    <!-- <a href=""><i class="fa-brands fs-5 fa-twitter"></i></a> -->
+                    <a href="https://www.linkedin.com/in/pal-yogesh" target="_blank"><i class="fa-brands fs-5 fa-linkedin-in"></i></a>          
                     <a  href="https://facebook.com" target="_blank" ><i class="fa-brands fs-5 fa-facebook"></i></a>
                     <a href="https://github.com/theyogeshpal" target="_blank"><i class="fa-brands fs-5 fa-github"></i></a>
                     <a href="https://www.instagram.com/the_yogeshpal" target="_blank"><i class="fa-brands fs-5 fa-instagram"></i></a>
                 </div>
             </div>
         </section>
-
-
         <section id="About">
-
             <div class="col-sm-12">
-                <h1 class="about">About Us</h1>
-                <hr class="hr">
+                <h1 class="about">About Me</h1><hr class="hr">
                 <div class="about-text-container">
-                <p>Hello! <span>I'm Yogesh Pal</span>, a passionate <span>Full Stack Developer</span> with expertise in
-                    both frontend and backend
-                    technologies. I specialize in creating dynamic and responsive web applications using the Dot Net Core MVC
-                    . With a strong foundation in HTML, CSS, JavaScript, and various frameworks,
-                    I'm dedicated to delivering high-quality code and seamless user experiences. Whether it's building
-                    robust backend systems or crafting engaging user interfaces, I thrive on turning ideas into reality.
-                </p>
-                <p>
-                    My journey in the tech world began with an intense focus on web development, where I honed my skills
-                    through various training and internships. I started with a 45-day Summer training at Digicoders Technologies Pvt. Ltd. Lucknow, where I was honored with a "Star Performance Award" for my
-                    dedication and skills. 
-                </p>
-                
+                <p>Hello! <span>I'm Yogesh Pal</span>, a passionate <span>Full Stack Developer</span> with expertise in both frontend and backend technologies. I specialize in creating dynamic and responsive web applications using the Dot Net Core MVC. With a strong foundation in HTML, CSS, JavaScript, and various frameworks, I'm dedicated to delivering high-quality code and seamless user experiences. Whether it's building robust backend systems or crafting engaging user interfaces, I thrive on turning ideas into reality.</p>
+                <p> My journey in the tech world began with an intense focus on web development, where I honed my skills through various training and internships. I started with a 45-day Summer training at Digicoders Technologies Pvt. Ltd. Lucknow, where I was honored with a "Star Performance Award" for my dedication and skills.  </p>
                 <ul>
                     <li>Team Work</li>
                     <li>Fast Learner</li>
@@ -691,82 +766,45 @@
                 </ul>
             </div>
             </div>
-
             <div class="row mx-sm-5 d-flex ab-b justify-content-center qualification">
-    
-    
-    
                 <div class="col-sm-5 list">
                     <p class=" text-black qualification-head text-start"><span class="qualification-span">Education Qualification :</span></p>
                     <ul class="p-0 lis mb-sm-5">
                         <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i> Pursuing Polytechnic Diploma In <b>CSE.</b> </li>
                         <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i> Intermediate From NIOS Board (2025).</li>
                         <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i> High School From CBSE Board (2023).</li>
-                        
                     </ul>
-    
-    
                     <p class=" text-black qualification-head text-start"><span class="qualification-span">Training and Certificates :</span></p>
                     <ul class="p-0 lis mb-sm-5">
                         <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i> Completed 15 months <b>Advanced diploma in Information Technology</b> in 2023.</li>
                         <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i> Completed 45 Days Summer Training in 2025 during Second year of Polytechnic Diploma.</li>
-                        
-                    </ul>
-    
-    
-                    <p class=" text-black qualification-head text-start"><span class="qualification-span">
-                        Technical Knowledge :</span></p>
+                    </ul> 
+                    <p class=" text-black qualification-head text-start"><span class="qualification-span">Technical Knowledge :</span></p>
                     <ul class="p-0 lis mb-sm-5">
-                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>
-                             C, C#, MSSQL Server
-                        </li>
+                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>C, C#, MSSQL Server</li>
                         <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i> ASP.NET Core, ASP.Net with MVC</li>
-                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>
-                             HTML, HTML-5, CSS, CSS-3, JavaScript, Bootstrap
-                        </li>
-                        
+                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>HTML, HTML-5, CSS, CSS-3, JavaScript, Bootstrap</li>               
                     </ul>
-    
-                    
-    
-    
                 </div>
-               
                 <div class="col-sm-5 list">
-    
-                    
-    
-                    <p class=" text-black qualification-head text-start"><span class="qualification-span">
-                        Strengths :</span></p>
+                    <p class=" text-black qualification-head text-start"><span class="qualification-span">Strengths :</span></p>
                     <ul class="p-0 lis">
-                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i> 
-                            Logical and Analytical ability for new project and application.</li>
-                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>
-                             Good verbal and presentation skills.
-                        </li>
-                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>
-                             A quick learner and eager to up to date in IT industry with Programming language Development tools.
-                        </li>
-                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>
-                             Public Speaking and Presentation Skills.
-                        </li>
-                        
+                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>Logical and Analytical ability for new project and application.</li>
+                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>Good verbal and presentation skills.</li>
+                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>A quick learner and eager to up to date in IT industry with Programming language Development tools.</li>
+                        <li class="list-unstyled"><i class="fw-bold fa-regular fa-hand-pointer fa-rotate-90"></i>Public Speaking and Presentation Skills.</li>         
                     </ul>
                 </div>
-    
             </div>
         </section>
-
         <section id="Project">
-
             <div class="row bg-dark rpr d-flex justify-content-center">
                 <div class="projects col-sm-12">
                     <p class="fs-1 text-center fw-bold text-white m-0 work-head">My Recent Works</p>
                 </div>
             </div>
             <div class="row bg-dark pr d-flex flex-wrap justify-content-center">
-                <div class="projects col-sm-12">
-                    
+                <div class="projects col-sm-12">                
                     <div class="project-cards"><div class="card">
                         <img src="./images/Screenshot 2026-01-16 134513.png" class="card-img-top" alt="...">
                         <div class="card-body pb-0">
@@ -802,9 +840,7 @@
                             </div>
                         </div>
                         </div>
-                    </div>
-                    
-
+                    </div>    
                     <div class="project-cards"><div class="card">
                         <img src="./images/nurture-nest.png" class="card-img-top" alt="...">
                         <div class="card-body pb-0">
@@ -817,7 +853,6 @@
                         </div>
                         </div>
                     </div>
-
                     <div class="project-cards"><div class="card">
                         <img src="./images/Yogesh-pal.png" class="card-img-top" alt="...">
                         <div class="card-body pb-0">
@@ -830,7 +865,6 @@
                         </div>
                         </div>
                     </div>
-
                     <div class="project-cards"><div class="card" >
                         <img src="./images/fanta.png" class="card-img-top" alt="...">
                         <div class="card-body pb-0">
@@ -843,7 +877,6 @@
                         </div>
                         </div>
                     </div>
-
                     <div class="project-cards"><div class="card">
                         <img src="./images/travel-website.png" class="card-img-top" alt="...">
                         <div class="card-body pb-0">
@@ -856,7 +889,6 @@
                         </div>
                         </div>
                     </div>
-
                     <div class="project-cards"><div class="card" >
                         <img src="./images/calculator.png" class="card-img-top" alt="...">
                         <div class="card-body pb-0">
@@ -868,160 +900,54 @@
                             </div>
                         </div>
                         </div>
-                    </div>
-                    <!-- <div class="project-cards"><div class="card" >
-                        <img src="./images/tic-tac-toe.png" class="card-img-top" alt="...">
-                        <div class="card-body pb-0">
-                            <div class="card-text py-2 p-0 m-0 d-flex flex-column align-items-center">
-                                <p class="fw-bold fs-6 m-0 p-0 text-center">Tic Tac Toe</p>
-                                <small>Build Using Javascript</small>
-                                <small>(Mini Project)</small>
-                                <a class="text-decoration-none fw-bold text-success" href="https://tic-tac-toe-yogesh-pal.netlify.app/" target="_blank" ><p class="text-center m-0 p-0">Visit <i class="fa-solid fa-up-right-from-square"></i></p></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div> -->
-                
-                    <!-- <div class="project-cards"><div class="card">
-                        <img src="./images/Clock.png" class="card-img-top" alt="...">
-                        <div class="card-body pb-0">
-                            <div class="card-text py-2 p-0 m-0 d-flex flex-column align-items-center">
-                                <p class="fw-bold fs-6 m-0 p-0 text-center">Clock</p>
-                                <small>Build Using Javascript</small>
-                                <small>(Mini Project)</small>
-                                <a class="text-decoration-none fw-bold text-success" href="https://clock-yogesh-pal.netlify.app/"><p class="text-center m-0 p-0">Visit <i class="fa-solid fa-up-right-from-square"></i></p></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div> -->
-                    
-                    <!-- <div class="project-cards"><div class="card" >
-                        <img src="./images/puzzle.png" class="card-img-top" alt="...">
-                        <div class="card-body pb-0">
-                            <div class="card-text py-2 p-0 m-0 d-flex flex-column align-items-center">
-                                <p class="fw-bold fs-6 m-0 p-0 text-center">Puzzle Game</p>
-                                <small>Build Using Javascript</small>
-                                <small>(Mini Project)</small>
-                                <a class="text-decoration-none fw-bold text-success" href="https://puzzle-yogesh.netlify.app/" target="_blank" ><p class="text-center m-0 p-0">Visit <i class="fa-solid fa-up-right-from-square"></i></p></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div> -->
-                     <!-- <div class="project-cards"><div class="card" >
-                        <img src="./images/rock-paper-scissor.png" class="card-img-top" alt="...">
-                        <div class="card-body pb-0">
-                            <div class="card-text py-2 p-0 m-0 d-flex flex-column align-items-center">
-                                <p class="fw-bold fs-6 m-0 p-0 text-center">Rock Paper Scissors</p>
-                                <small>Build Using Javascript</small>
-                                <small>(Mini Project)</small>
-                                <a class="text-decoration-none fw-bold text-success" href="https://rock-paper-scissors-yogesh.netlify.app/" target="_blank" ><p class="text-center m-0 p-0">Visit <i class="fa-solid fa-up-right-from-square"></i></p></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div> -->
-                     
-                     
-    
-                    
-    
-                    
-                    
+                    </div>     
                 </div>
             </div>
         </section>
-
-
         <section id="Contact">
-
             <div class="row contact d-flex align-items-start text-center align-content-center justify-content-center py-sm-5">
                 <div class="col-sm-6 py-sm-5">
                     <div class="contact-left"> <br>
-                        <h1 class="about mt-0 p-0">Let's Talk</h1>
-                        <hr class="hr">
-                        <br>
-                        <p>
-                            I'm excited to take on new projects! Let's collaborate on something amazing. Message me anytime
-                            with your ideas. <br> – I'm here to help bring your vision to life. No project is too big or too
-                            small. Let's create something extraordinary together!
-                        </p><br>
+                        <h1 class="about mt-0 p-0">Let's Talk</h1><hr class="hr"><br>
+                        <p> I'm excited to take on new projects! Let's collaborate on something amazing. Message me anytime with your ideas. <br> – I'm here to help bring your vision to life. No project is too big or too small. Let's create something extraordinary together!</p><br>
                         <p><i class="fa-solid fa-envelope"></i> yogeshpal1309@gmail.com</p>
                         <p><i class="fa-solid fa-phone-volume"></i> +91 78170-95043</p>
                         <p><i class="fa-solid fa-location-dot"></i> Bareilly, Uttar Pradesh</p>
                     </div>
                 </div>
                 <div class="col-sm-6 py-sm-5 flex-wrap">
-                    <!-- <p class="fs-1 pb-sm-5  work-head text-black fw-bold text-center">Contact Me</p> -->
-                    <form action="" class="d-flex form w-100 flex-wrap justify-content-center align-content-center align-items-center">
-                        <input type="text" class="inp form-control a1" placeholder="Your Name *">
-                        <input type="number" class="inp form-control a1" placeholder="Phone number * ">
-                        <input type="email" class="inp form-control a1" placeholder="Email *">
-    
+                    <form name="contact" method="POST" netlify class="d-flex form w-100 flex-wrap justify-content-center align-content-center align-items-center">
+                        <input type="text" name="name" class="inp form-control a1" placeholder="Your Name *">
+                        <input type="number" name="mobile" class="inp form-control a1" placeholder="Phone number * ">
+                        <input type="email" name="email" class="inp form-control a1" placeholder="Email *">
                         <textarea name="" class="inp form-control a1" id="" placeholder="Your Message *"></textarea>
-    
-                        <button class="btn btn-danger sub form-control w-50 fs-sm-5 fw-bold my-3 rounded-pill  text-center">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-    
+                        <button type="submit" class="btn btn-danger sub form-control w-50 fs-sm-5 fw-bold my-3 rounded-pill  text-center">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
-    
             </div>
         </section>
-
-
-
         <div class="row">
-
-
-
             <footer class="bg-black text-white w-100 m-0 p-0 text-center">
-
-
-                
-           
             <div class="container p-4">
-             
-                <section class="mb-4">
-               
-                <a href="https://facebook.com" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"
-                    ><i class="fab fa-facebook-f"></i
-                ></a>
-    
-               
-                
-    
-             
-                <a href="https://www.instagram.com/the_yogeshpal" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"
-                    ><i class="fab fa-instagram"></i
-                ></a>
-    
-              
-                <a href="https://www.linkedin.com/in/pal-yogesh" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"
-                    ><i class="fab fa-linkedin-in"></i
-                ></a>
-    
-               
-                <a href="https://github.com/theyogeshpal" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"
-                    ><i class="fab fa-github"></i
-                ></a>
+                <section class="mb-4"> 
+                <a href="https://facebook.com" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/the_yogeshpal" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pal-yogesh" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>         
+                <a href="https://github.com/theyogeshpal" target="_blank" data-mdb-ripple-init class="btn fs-2 btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
                 </section>
-                
-        
-            
-            <div class="text-center">
-            © Copyright 2025.               
-            </div>
-            <div class="text-center mt-3">
-            Designed by Yogesh Pal 😎              
-            </div>
-           
+            <div class="text-center"> © Copyright 2025.</div>
+            <div class="text-center mt-3"> Designed by Yogesh Pal 😎  </div>
             </footer>
-            
         </div>
-       
-
-
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
