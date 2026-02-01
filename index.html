@@ -41,6 +41,8 @@
             font-family: 'Poppins', sans-serif;
             position: relative;
             overflow-x: hidden;
+
+
         }
 
         body::before {
@@ -62,6 +64,7 @@
 
             0%,
             100% {
+
                 transform: translateY(0px) rotate(0deg);
             }
 
@@ -400,14 +403,31 @@
 
         .social-1 img {
             color: green;
-            height: 6.5vmin;
-            width: 6.5vmin;
+            height: 9vmin;
+            width: 9vmin;
             filter: drop-shadow(2px 2px 2px black);
         }
 
         .img2 img {
-            height: 6vmin;
-            width: 6vmin;
+            height: 8.5vmin;
+            width: 8.5vmin;
+        }
+
+        @media (max-width: 576px) {
+            .social-1 {
+                width: 15vmin;
+                left: 4vmin;
+            }
+
+            .social-1 img {
+                height: 14vmin !important;
+                width: 14vmin !important;
+            }
+
+            .img2 img {
+                height: 13vmin !important;
+                width: 13vmin !important;
+            }
         }
 
         /* Projects Section Enhancement */
@@ -554,8 +574,8 @@
             gap: 0.5rem;
             padding: 8px 16px;
             background: rgba(255, 255, 255, 0.1);
-            color: #60a5fa;
-            border: 1px solid rgba(96, 165, 250, 0.3);
+            color: #DF1761;
+            border: 1px solid rgba(223, 23, 97, 0.3);
             border-radius: 50px;
             text-decoration: none !important;
             font-weight: 600;
@@ -564,9 +584,9 @@
         }
 
         .visit-btn:hover {
-            background: #60a5fa;
+            background: #DF1761;
             color: white;
-            box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+            box-shadow: 0 0 15px rgba(223, 23, 97, 0.5);
         }
 
         .hidden-project {
@@ -867,11 +887,11 @@
             height: 100%;
             object-fit: contain;
             transition: transform 0.5s ease;
-            padding: 5px;
+            transform: scale(1.05);
         }
 
         .timeline-content:hover .cert-image img {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .cert-year {
@@ -1303,10 +1323,9 @@
             <div class="row intro m-0">
                 <div class="social-1 d-flex justify-content-around align-items-center align-content-center flex-column">
                     <a href="https://wa.me/7817095043" target="_blank" aria-label="Contact via WhatsApp"><img
-                            src="https://static.vecteezy.com/system/resources/previews/016/716/468/non_2x/whatsapp-icon-free-png.png"
-                            alt="WhatsApp Contact"></a>
-                    <a class="img2" href="tel:7817095043" aria-label="Call Yogesh Pal"><img
-                            src="https://cdn-icons-png.flaticon.com/512/9946/9946313.png" alt="Phone Contact"></a>
+                            src="./images/whatsapp-icon-free-png.webp" alt="WhatsApp Contact"></a>
+                    <a class="img2" href="tel:7817095043" aria-label="Call Yogesh Pal"><img src="./images/phone.webp"
+                            alt="Phone Contact"></a>
                 </div>
                 <div class="col-sm-6 h-sm-100 d-flex flex-wrap gap-0 justify-content-around  align-content-center align-items-center text-center text-white"
                     data-aos="fade-right">
@@ -1506,7 +1525,7 @@
                     <div class="timeline-item left" data-aos="fade-right">
                         <div class="timeline-content">
                             <div class="cert-image">
-                                <img src="./images/Screenshot 2026-01-16 134513.png" alt="Summer Training Certificate">
+                                <img src="./images/summer-training.jpeg" alt="Summer Training Certificate">
                             </div>
                             <div class="cert-text">
                                 <span class="cert-year">2025</span>
@@ -1521,7 +1540,7 @@
                     <div class="timeline-item right" data-aos="fade-left">
                         <div class="timeline-content">
                             <div class="cert-image">
-                                <img src="./images/Screenshot 2026-01-16 134513.png" alt="Summer Training Certificate">
+                                <img src="./images/ADIT.jpeg" alt="Advanced Diploma in IT Certificate">
                             </div>
                             <div class="cert-text">
                                 <span class="cert-year">2023</span>
@@ -1536,7 +1555,7 @@
                     <div class="timeline-item left" data-aos="fade-right">
                         <div class="timeline-content">
                             <div class="cert-image">
-                                <img src="./images/Screenshot 2025-09-10 121537.png" alt="Advanced Diploma Certificate">
+                                <img src="./images/li-fi&wi-fi.jpeg" alt="Li-Fi & Wi-Fi Workshop Certificate">
                             </div>
                             <div class="cert-text">
                                 <span class="cert-year">2023</span>
@@ -1834,7 +1853,7 @@
         AOS.init({
             duration: 800,
             once: true,
-            offset: 80
+            offset: 40
         });
 
         document.addEventListener('DOMContentLoaded', function () {
