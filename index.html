@@ -41,8 +41,12 @@
             font-family: 'Poppins', sans-serif;
             position: relative;
             overflow-x: hidden;
+            width: 100%;
+        }
 
-
+        html {
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body::before {
@@ -130,7 +134,8 @@
 
         .head {
             background-color: rgb(27, 23, 23);
-            height: 4.9rem;
+            height: auto;
+            min-height: 4.9rem;
             position: sticky;
             top: 0;
             z-index: 999;
@@ -149,6 +154,7 @@
             background-color: rgb(27, 23, 23);
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .intro::before {
@@ -486,9 +492,10 @@
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2.5rem;
-            padding: 0 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 0 15px;
+            width: 100%;
         }
 
         .project-card {
@@ -912,8 +919,8 @@
 
             .timeline-item {
                 width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+                padding-left: 55px;
+                padding-right: 15px;
                 text-align: left !important;
             }
 
@@ -939,11 +946,13 @@
             .timeline-content {
                 flex-direction: column !important;
                 align-items: flex-start;
+                padding: 15px;
             }
 
             .cert-image {
                 width: 100%;
-                height: auto;
+                height: 200px;
+                margin-bottom: 15px;
             }
         }
 
@@ -1148,9 +1157,14 @@
             }
 
             .about-text-container ul {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                display: flex;
+                flex-wrap: wrap;
                 gap: 0.5rem;
+            }
+
+            .about-text-container ul li {
+                margin-right: 10px;
+                width: 100%;
             }
 
             .ab-b {
@@ -1180,14 +1194,16 @@
 
         @media (max-width: 576px) {
             .navbar-brand {
-                font-size: 1.8rem;
-                margin: 0px auto;
+                font-size: 1.5rem !important;
+                margin: 0px 0px;
+                width: auto;
+                white-space: nowrap;
             }
 
             .intro {
                 height: auto;
-                min-height: 35rem;
-                padding: 1rem 0;
+                min-height: 100vh;
+                padding: 2rem 0;
             }
 
             .firstring {
@@ -1215,7 +1231,9 @@
             #web {
                 margin-left: 0;
                 text-align: center;
-                font-size: 1rem;
+                font-size: 1.1rem;
+                word-wrap: break-word;
+                line-height: normal;
             }
 
             .paraforname {
@@ -1229,8 +1247,10 @@
             }
 
             .developerimg {
-                height: 100%;
+                height: 45vmin;
+                width: 45vmin;
                 border: 4px solid orangered;
+                object-fit: cover;
             }
 
             .about {
@@ -1768,23 +1788,23 @@
                                     <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                                     <div>
                                         <strong>Email</strong><br>
-                                        <a href="mailto:yogeshpal1309@gmail.com"
-                                            class="text-dark text-decoration-none">yogeshpal1309@gmail.com</a>
+                                        <small>yogeshpal1309@gmail.com</small>
                                     </div>
                                 </div>
+
                                 <div class="contact-info-item">
                                     <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
                                     <div>
                                         <strong>Phone</strong><br>
                                         <a href="tel:+917817095043" class="text-dark text-decoration-none">+91
-                                            78170-95043</a>
+                                            78170-95043&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                                     </div>
                                 </div>
                                 <div class="contact-info-item">
                                     <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                                     <div>
                                         <strong>Location</strong><br>
-                                        <span>Bareilly, Uttar Pradesh</span>
+                                        <span>Bareilly, Uttar Pradesh&nbsp;&nbsp;&nbsp;</span>
                                     </div>
                                 </div>
                             </div>
