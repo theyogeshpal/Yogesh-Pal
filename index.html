@@ -81,17 +81,32 @@
             }
         }
 
-        .nav-item a::after {
-            content: "  ";
-            height: 0.3rem;
-            background-color: purple;
-            display: flex;
-            width: 0;
-            transition: all 0.4s ease-in-out;
+        .nav-link {
+            transition: all 0.3s ease !important;
         }
 
-        .nav-item a:hover::after {
+        .nav-item a {
+            position: relative;
+        }
+
+        .nav-item a::after {
+            content: "";
+            height: 3px;
+            background: linear-gradient(to right, #DF1761, #fb923c);
+            display: block;
+            width: 0;
+            transition: all 0.4s ease-in-out;
+            margin-top: 5px;
+        }
+
+        .nav-item a:hover::after,
+        .nav-item a.active::after {
             width: 100%;
+        }
+
+        .nav-item a.active {
+            color: #fb923c !important;
+            transform: scale(1.05);
         }
 
         .navbar-brand {
@@ -136,9 +151,12 @@
             background-color: rgb(27, 23, 23);
             height: auto;
             min-height: 4.9rem;
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 999;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .dropmenu {
@@ -1007,10 +1025,28 @@
         }
 
         .about-text-container {
-            width: 80%;
+            width: 100%;
             margin: auto;
             text-align: justify;
             margin-top: 20px;
+        }
+
+        .about-img-container {
+            position: relative;
+            padding: 15px;
+        }
+
+        .about-img-container img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+            border: 5px solid #DF1761;
+        }
+
+        .about-img-container:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(223, 23, 97, 0.3);
         }
 
         .about-text-container p {
@@ -1194,7 +1230,7 @@
 
         @media (max-width: 576px) {
             .navbar-brand {
-                font-size: 1.5rem !important;
+                font-size: 3rem !important;
                 margin: 0px 0px;
                 width: auto;
                 white-space: nowrap;
@@ -1202,8 +1238,11 @@
 
             .intro {
                 height: auto;
-                min-height: auto;
-                padding: 0.5rem 0;
+                min-height: 90vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 1rem 0;
             }
 
             .firstring {
@@ -1247,10 +1286,15 @@
             }
 
             .developerimg {
-                height: 60vmin;
-                width: 60vmin;
+                height: 70vmin;
+                width: 70vmin;
                 border: 4px solid orangered;
                 object-fit: cover;
+            }
+
+            .image-developer {
+                margin-top: 5rem;
+                margin-bottom: 2rem;
             }
 
             .about {
@@ -1315,8 +1359,8 @@
             <div class="col-sm-12 navbr m-0">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid navbar-m gap-sm-5">
-                        <a class="navbar-brand text-white " style="font-family: cursive; font-size: 40px;"
-                            href="#">𝕐𝕠𝕘𝕖𝕤𝕙 ℙ𝕒𝕝</a>
+                        <a class="navbar-brand text-white mx-auto text-center"
+                            style="font-family: cursive; font-size: 40px;" href="#">𝕐𝕠𝕘𝕖𝕤𝕙 ℙ𝕒𝕝</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav">
                             <span class="navbar-toggler-icon"></span>
@@ -1341,7 +1385,7 @@
                 </nav>
             </div>
         </div>
-        <section id="Home">
+        <section id="Home" style="padding-top: 4.9rem;">
             <div class="row intro m-0">
                 <div class="social-1 d-flex justify-content-around align-items-center align-content-center flex-column">
                     <a href="https://wa.me/7817095043" target="_blank" aria-label="Contact via WhatsApp"><img
@@ -1383,27 +1427,45 @@
                 </div>
             </div>
         </section>
-        <section id="About">
-            <div class="col-sm-12">
+        <section id="About" class="overflow-hidden">
+            <div class="container">
                 <h1 class="about">About Me</h1>
                 <hr class="hr">
-                <div class="about-text-container">
-                    <p>Hello! <span>I'm Yogesh Pal</span>, a dedicated <span>Full Stack Developer</span> and CSE student
-                        with a passion for building high-performance web applications. My expertise spans across the
-                        entire development lifecycle, from architecting robust backends using <span>ASP.NET Core</span>
-                        and <span>Spring Boot</span> to crafting modern, responsive frontends with
-                        <span>React.js</span>,
-                        <span>Tailwind CSS</span>, and <span>Bootstrap</span>.
-                    </p>
-                    <p>I specialize in creating seamless user experiences powered by efficient <span>Rest APIs</span>
-                        and
-                        <span>SQL databases</span> (MSSQL & MySQL). My technical toolkit is further enhanced by advanced
-                        animation libraries like <span>GSAP</span> and <span>AOS</span>, ensuring every project I
-                        deliver is not just functional, but visually exceptional.
-                    </p>
-                    <p>Awarded the <span>"Star Performance"</span> honor at Digicoders Technologies, I bring a proven
-                        track record of dedication, logical problem-solving, and rapid skill acquisition to every
-                        challenge. I thrive on turning complex ideas into scalable, production-ready reality.</p>
+                <div class="row align-items-center mt-5">
+                    <div class="col-md-5 mb-4 mb-md-0" data-aos="fade-right">
+                        <div class="about-img-container">
+                            <img src="./images/Yogesh-Pal-about.png" alt="Yogesh Pal - About Image">
+                        </div>
+                    </div>
+                    <div class="col-md-7" data-aos="fade-left">
+                        <div class="about-text-container">
+                            <p>Hello! <span>I'm Yogesh Pal</span>, a dedicated <span>Full Stack Developer</span> and CSE
+                                student
+                                with a passion for building high-performance web applications. My expertise spans across
+                                the
+                                entire development lifecycle, from architecting robust backends using <span>ASP.NET
+                                    Core</span>
+                                and <span>Spring Boot</span> to crafting modern, responsive frontends with
+                                <span>React.js</span>,
+                                <span>Tailwind CSS</span>, and <span>Bootstrap</span>.
+                            </p>
+                            <p>I specialize in creating seamless user experiences powered by efficient <span>Rest
+                                    APIs</span>
+                                and
+                                <span>SQL databases</span> (MSSQL & MySQL). My technical toolkit is further enhanced by
+                                advanced
+                                animation libraries like <span>GSAP</span> and <span>AOS</span>, ensuring every project
+                                I
+                                deliver is not just functional, but visually exceptional.
+                            </p>
+                            <p>Awarded the <span>"Star Performance"</span> honor at Digicoders Technologies, I bring a
+                                proven
+                                track record of dedication, logical problem-solving, and rapid skill acquisition to
+                                every
+                                challenge. I thrive on turning complex ideas into scalable, production-ready reality.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row mx-sm-5 d-flex ab-b justify-content-center qualification">
@@ -1936,6 +1998,32 @@
                     }
                 });
             }
+
+            // Active link highlighting on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+            function highlightNavLink() {
+                let scrollY = window.pageYOffset;
+
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - 150;
+                    const sectionId = current.getAttribute('id');
+
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + sectionId) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavLink);
+            highlightNavLink(); // Initial call
         });
     </script>
 </body>
