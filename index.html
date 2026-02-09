@@ -190,6 +190,108 @@
             pointer-events: none;
         }
 
+        .tech-float-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .tech-float-icon {
+            position: absolute;
+            font-size: 5.5rem;
+            opacity: 0.12;
+            animation: floatTech 20s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
+        }
+
+        .tech-float-icon:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            color: #61DAFB;
+            animation-delay: 0s;
+            animation-duration: 25s;
+        }
+
+        .tech-float-icon:nth-child(2) {
+            top: 20%;
+            right: 10%;
+            color: #F7DF1E;
+            animation-delay: -3s;
+            animation-duration: 22s;
+        }
+
+        .tech-float-icon:nth-child(3) {
+            top: 60%;
+            left: 8%;
+            color: #E34F26;
+            animation-delay: -6s;
+            animation-duration: 28s;
+        }
+
+        .tech-float-icon:nth-child(4) {
+            top: 70%;
+            right: 15%;
+            color: #1572B6;
+            animation-delay: -9s;
+            animation-duration: 24s;
+        }
+
+        .tech-float-icon:nth-child(5) {
+            top: 40%;
+            left: 15%;
+            color: #512BD4;
+            animation-delay: -12s;
+            animation-duration: 26s;
+        }
+
+        .tech-float-icon:nth-child(6) {
+            top: 30%;
+            right: 20%;
+            color: #68A063;
+            animation-delay: -15s;
+            animation-duration: 23s;
+        }
+
+        .tech-float-icon:nth-child(7) {
+            top: 80%;
+            left: 20%;
+            color: #00758F;
+            animation-delay: -18s;
+            animation-duration: 27s;
+        }
+
+        .tech-float-icon:nth-child(8) {
+            top: 15%;
+            left: 50%;
+            color: #F05032;
+            animation-delay: -21s;
+            animation-duration: 25s;
+        }
+
+        @keyframes floatTech {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-30px) translateX(20px) rotate(90deg);
+            }
+
+            50% {
+                transform: translateY(-60px) translateX(-20px) rotate(180deg);
+            }
+
+            75% {
+                transform: translateY(-30px) translateX(20px) rotate(270deg);
+            }
+        }
+
         @keyframes sparkle {
 
             0%,
@@ -234,52 +336,27 @@
         }
 
         .developerimg {
-            height: 49vmin;
-            border: 2vmin solid rgb(249, 87, 29);
+            height: 40vmin;
+            width: 40vmin;
+            object-fit: cover;
+            border: 0.5vmin solid rgb(255, 255, 255);
             border-radius: 50%;
-            animation: revolve-reverse;
-            animation-timing-function: ease;
-            animation-duration: 20s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes revolve-reverse {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(-180deg);
-            }
         }
 
         .firstring {
-            border: 0.1rem dashed white;
-            height: 60vmin;
-            width: 60vmin;
+            border: 0.5vmin solid rgb(255, 255, 255);
+            height: 50vmin;
+            width: 50vmin;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            animation: revolve;
-            animation-duration: 20s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes revolve {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(180deg);
-            }
         }
 
         .secondring {
-            border: 0.1rem dashed white;
-            height: 55vmin;
-            width: 55vmin;
+            border: 0.5vmin solid rgb(255, 255, 255);
+            height: 45vmin;
+            width: 45vmin;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -289,11 +366,11 @@
         .social {
             width: 12vmin;
             position: fixed;
-            right: 0;
-            bottom: 18rem;
+            right: 2vmin;
+            bottom: 12rem;
             z-index: 99;
-            height: 30vmin;
-            gap: 2rem;
+            height: auto;
+            gap: 1.5rem;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -301,19 +378,56 @@
             flex-direction: column;
         }
 
+        .social a {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            transition: all 0.3s ease;
+            pointer-events: auto;
+            text-decoration: none;
+        }
+
         .social i {
-            transition: all 0.1s ease;
-            color: orangered;
+            transition: all 0.4s ease;
+            color: white;
             height: 4vmin;
             width: 4vmin;
             line-height: 4vmin;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8vmin;
+        }
+
+        .social a:nth-child(1) i {
+            background: #0077b5;
+        }
+
+        .social a:nth-child(2) i {
+            background: #1877f2;
+        }
+
+        .social a:nth-child(3) i {
+            background: #333;
+        }
+
+        .social a:nth-child(4) i {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social a:nth-child(5) i {
+            background: #5865f2;
+        }
+
+        .social a:nth-child(6) i {
+            background: #000000;
         }
 
         .social i:hover {
-            background-color: white;
-            transform: scale(1.5);
-            border-radius: 50%;
-            line-height: 4vmin;
+            transform: scale(1.3) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
 
         .qualification {
@@ -510,7 +624,7 @@
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             padding: 0 15px;
             width: 100%;
@@ -522,17 +636,34 @@
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             height: 100%;
             display: flex;
             flex-direction: column;
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s;
+            z-index: 1;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-15px) scale(1.02);
+            border-color: rgba(96, 165, 250, 0.6);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.05), rgba(192, 132, 252, 0.05));
         }
 
         .project-image-container {
@@ -549,7 +680,8 @@
         }
 
         .project-card:hover .project-image-container img {
-            transform: scale(1.1);
+            transform: scale(1.15);
+            filter: brightness(1.1);
         }
 
         .project-overlay {
@@ -576,7 +708,70 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            text-align: center;
+            text-align: left;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: flex-start;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(96, 165, 250, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            background: rgba(96, 165, 250, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .view-more-container {
+            margin-top: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .view-more-btn {
+            background: linear-gradient(135deg, #60a5fa, #c084fc);
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(96, 165, 250, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .view-more-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(192, 132, 252, 0.4);
+            background: linear-gradient(135deg, #3b82f6, #a855f7);
+            color: white;
+        }
+
+        .view-more-btn i {
+            transition: transform 0.4s ease;
+        }
+
+        .view-more-btn:hover i {
+            transform: translateY(3px);
         }
 
         .project-title {
@@ -584,6 +779,12 @@
             font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-title {
+            color: #fb923c;
+            transform: translateY(-2px);
         }
 
         .project-category {
@@ -597,21 +798,40 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #DF1761;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, rgba(223, 23, 97, 0.2), rgba(251, 146, 60, 0.2));
+            color: #fb923c;
             border: 1px solid rgba(223, 23, 97, 0.3);
             border-radius: 50px;
             text-decoration: none !important;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             margin-top: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #DF1761, #fb923c);
+            transition: left 0.4s;
+            z-index: -1;
+        }
+
+        .visit-btn:hover::before {
+            left: 0;
         }
 
         .visit-btn:hover {
-            background: #DF1761;
             color: white;
-            box-shadow: 0 0 15px rgba(223, 23, 97, 0.5);
+            border-color: #DF1761;
+            box-shadow: 0 8px 25px rgba(223, 23, 97, 0.4);
+            transform: translateY(-2px);
         }
 
         .hidden-project {
@@ -976,6 +1196,10 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .contact-left h2 {
                 font-size: 2.5rem;
                 text-align: center;
@@ -1134,15 +1358,22 @@
             }
 
             .firstring {
-                border: 0rem dashed white;
+                border: 0;
                 height: 45vmin;
                 width: 45vmin;
             }
 
+            .firstring::before {
+                display: none;
+            }
+
             .secondring {
-                border: 0rem dashed white;
                 height: 100%;
                 width: 100%;
+            }
+
+            .secondring::before {
+                display: none;
             }
 
             .paraforname {
@@ -1173,7 +1404,8 @@
 
             .developerimg {
                 height: 100%;
-                border: 5px solid orangered;
+                width: 100%;
+                border-width: 0.3vmin;
             }
 
             .qualification {
@@ -1229,6 +1461,10 @@
         }
 
         @media (max-width: 576px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
             .navbar-brand {
                 font-size: 3rem !important;
                 margin: 0px 0px;
@@ -1246,15 +1482,22 @@
             }
 
             .firstring {
-                border: 0rem dashed white;
+                border: 0;
                 height: 60vmin;
                 width: 60vmin;
             }
 
+            .firstring::before {
+                display: none;
+            }
+
             .secondring {
-                border: 0rem dashed white;
                 height: 100%;
                 width: 100%;
+            }
+
+            .secondring::before {
+                display: none;
             }
 
             .paraforname {
@@ -1288,8 +1531,7 @@
             .developerimg {
                 height: 70vmin;
                 width: 70vmin;
-                border: 4px solid orangered;
-                object-fit: cover;
+                border-width: 0.4vmin;
             }
 
             .image-developer {
@@ -1331,6 +1573,11 @@
                 font-size: 16px;
                 line-height: 24px;
             }
+
+            #Home {
+                padding-top: 4.9rem;
+            }
+
         }
 
         @media (max-width: 321px) {}
@@ -1385,8 +1632,18 @@
                 </nav>
             </div>
         </div>
-        <section id="Home" style="padding-top: 4.9rem;">
+        <section id="Home" class="home">
             <div class="row intro m-0">
+                <div class="tech-float-icons">
+                    <i class="tech-float-icon devicon-react-original"></i>
+                    <i class="tech-float-icon devicon-javascript-plain"></i>
+                    <i class="tech-float-icon devicon-html5-plain"></i>
+                    <i class="tech-float-icon devicon-css3-plain"></i>
+                    <i class="tech-float-icon devicon-dotnetcore-plain"></i>
+                    <i class="tech-float-icon devicon-spring-plain"></i>
+                    <i class="tech-float-icon devicon-mysql-plain"></i>
+                    <i class="tech-float-icon devicon-git-plain"></i>
+                </div>
                 <div class="social-1 d-flex justify-content-around align-items-center align-content-center flex-column">
                     <a href="https://wa.me/7817095043" target="_blank" aria-label="Contact via WhatsApp"><img
                             src="./images/whatsapp-icon-free-png.webp" alt="WhatsApp Contact"></a>
@@ -1424,6 +1681,8 @@
                             class="fa-brands fs-5 fa-github"></i></a>
                     <a href="https://www.instagram.com/the_yogeshpal" target="_blank"><i
                             class="fa-brands fs-5 fa-instagram"></i></a>
+                    <a href="https://discord.com" target="_blank"><i class="fa-brands fs-5 fa-discord"></i></a>
+                    <a href="https://x.com" target="_blank"><i class="fa-brands fs-5 fa-x-twitter"></i></a>
                 </div>
             </div>
         </section>
@@ -1604,235 +1863,24 @@
                 <h1 class="about text-center" style="padding-top: 0;">Training & Certifications</h1>
                 <hr class="hr mb-5">
 
-                <div class="timeline-container">
-                    <!-- Item 1 -->
-                    <div class="timeline-item left" data-aos="fade-right">
-                        <div class="timeline-content">
-                            <div class="cert-image">
-                                <img src="./images/summer-training.jpeg" alt="Summer Training Certificate">
-                            </div>
-                            <div class="cert-text">
-                                <span class="cert-year">2025</span>
-                                <h3>Summer Training (45 Days)</h3>
-                                <p>Completed intensive training at Digicoders Technologies Pvt. Ltd., specializing in
-                                    Dot Net Core development and earning the "Star Performance Award".</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="timeline-item right" data-aos="fade-left">
-                        <div class="timeline-content">
-                            <div class="cert-image">
-                                <img src="./images/ADIT.jpeg" alt="Advanced Diploma in IT Certificate">
-                            </div>
-                            <div class="cert-text">
-                                <span class="cert-year">2023</span>
-                                <h3>Advanced Diploma in IT</h3>
-                                <p>Successfully completed 15 months Advanced diploma in Information Technology, gaining
-                                    deep knowledge in software development and IT infrastructure.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="timeline-item left" data-aos="fade-right">
-                        <div class="timeline-content">
-                            <div class="cert-image">
-                                <img src="./images/li-fi&wi-fi.jpeg" alt="Li-Fi & Wi-Fi Workshop Certificate">
-                            </div>
-                            <div class="cert-text">
-                                <span class="cert-year">2023</span>
-                                <h3>Li-Fi & Wi-Fi Workshop</h3>
-                                <p>Received Certificate of Appreciation in Li-Fi & Wi-Fi Workshop organized by the
-                                    Institute of Computer Education, Bareilly.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="timeline-container" id="timeline-container">
+                    <!-- Timeline items will be loaded here -->
                 </div>
             </div>
         </section>
         <section id="Project" style="background-color: #1c1817;">
             <div class="container text-center">
                 <h1 class="work-head" data-aos="fade-up">My Recent Works</h1>
-                <div class="projects-grid">
-                    <!-- Project 1: AuraPark -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-image-container">
-                            <img src="./images/Screenshot 2026-01-16 134513.png"
-                                alt="AuraPark Parking Management System">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">AuraPark</h3>
-                                <p class="project-category">Parking Management System (Website + Software)</p>
-                            </div>
-                            <a href="https://aurapark.runasp.net/" target="_blank" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Syntax Academy -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image-container">
-                            <img src="./images/syntax-academy.png" alt="Syntax Academy Student Management System">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">Syntax Academy</h3>
-                                <p class="project-category">Student Management System (Website + Software)</p>
-                            </div>
-                            <a href="https://syntax-academy.runasp.net/" target="_blank" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: RiskFlight -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-image-container">
-                            <img src="./images/Screenshot 2025-09-10 121537.png"
-                                alt="RiskFlight Library Management System">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">RiskFlight</h3>
-                                <p class="project-category">Library Management System (Software)</p>
-                            </div>
-                            <a href="#" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: Nurture Nest -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-image-container">
-                            <img src="./images/nurture-nest.png" alt="Nurture Nest Foundation Website">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">Nurture Nest</h3>
-                                <p class="project-category">Non Government Organization (Website)</p>
-                            </div>
-                            <a href="https://nurture-nest-foundation.netlify.app/" target="_blank" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: Amber Archives E-Commerce Website -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image-container">
-                            <img src="./images/Amber-Archives.png" alt="Amber Archives E-Commerce Website">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">Amber Archives</h3>
-                                <p class="project-category">E-Commerce Website (Website)</p>
-                            </div>
-                            <a href="https://amber-ecommerce.netlify.app/" target="_blank" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: Er. Yogesh Pal Portfolio -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image-container">
-                            <img src="./images/Yogesh-pal.png" alt="Yogesh Pal Portfolio Website">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">Er. Yogesh Pal</h3>
-                                <p class="project-category">Personal Portfolio (Website)</p>
-                            </div>
-                            <a href="#" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 6: Fanta GSAP -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-image-container">
-                            <img src="./images/fanta.png" alt="Fanta Landing Page using GSAP">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">Fanta</h3>
-                                <p class="project-category">Built Using GSAP (Webpage)</p>
-                            </div>
-                            <a href="https://fanta-yogesh.netlify.app/" target="_blank" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 7: Dream Places -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-image-container">
-                            <img src="./images/travel-website.png" alt="Dream Places Trip Planner Website">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">Dream Places</h3>
-                                <p class="project-category">Trip Planner (Website)</p>
-                            </div>
-                            <a href="#" class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 8: Calculator -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image-container">
-                            <img src="./images/calculator.png" alt="JavaScript Calculator Mini Project">
-                            <div class="project-overlay">
-                                <i class="fa-solid fa-expand text-white fs-2"></i>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div>
-                                <h3 class="project-title">Calculator</h3>
-                                <p class="project-category">Built Using Javascript (Mini Project)</p>
-                            </div>
-                            <a href="https://theyogeshpal.github.io/calculator-yogesh-pal/" target="_blank"
-                                class="visit-btn">
-                                Visit Project <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be loaded here -->
                 </div>
-                <div id="view-more-container" class="text-center mt-5">
-                    <button id="view-more-btn" class="view-more-btn">
-                        View More Projects <i class="fa-solid fa-chevron-down ms-2"></i>
+                <div class="view-more-container" id="view-more-container">
+                    <button class="view-more-btn" id="view-more-btn" onclick="loadMoreProjects()">
+                        View More Projects <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <button class="view-more-btn" id="view-less-btn" onclick="viewLessProjects()"
+                        style="display: none; background: linear-gradient(135deg, #f472b6, #fb7185); box-shadow: 0 10px 20px rgba(244, 114, 182, 0.3);">
+                        View Less Projects <i class="fa-solid fa-chevron-up"></i>
                     </button>
                 </div>
             </div>
@@ -1929,10 +1977,12 @@
             </footer>
         </div>
     </div>
+    <script src="./js/data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         AOS.init({
             duration: 800,
@@ -1940,92 +1990,88 @@
             offset: 40
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const projects = document.querySelectorAll('.project-card');
-            const viewMoreBtn = document.getElementById('view-more-btn');
-            const projectsPerBatch = 4;
-            let currentVisible = projectsPerBatch;
+        let currentProjectIndex = 0;
+        const PROJECTS_PER_PAGE = 3;
 
-            // Initially hide projects beyond the first batch
-            projects.forEach((project, index) => {
-                if (index >= projectsPerBatch) {
-                    project.classList.add('hidden-project');
-                }
+        function renderProjectBatch(projects) {
+            const projectsGrid = document.getElementById('projects-grid');
+            if (!projectsGrid) return;
+
+            projects.forEach(project => {
+                const techs = project.technologies.split(',');
+                const techBadges = techs.map(tech => `<span class="tech-badge">${tech.trim()}</span>`).join('');
+
+                projectsGrid.innerHTML += `
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image-container">
+                            <img src="${project.image}" alt="${project.title}">
+                            <div class="project-overlay"><i class="fa-solid fa-expand text-white fs-2"></i></div>
+                        </div>
+                        <div class="project-body">
+                            <div>
+                                <h3 class="project-title">${project.title}</h3>
+                                <p class="project-category">${project.category}</p>
+                                <div class="tech-badges">${techBadges}</div>
+                            </div>
+                            <a href="${project.link}" target="_blank" class="visit-btn">Visit Project <i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                `;
             });
+            AOS.refresh();
+        }
 
-            if (projects.length <= projectsPerBatch) {
-                if (viewMoreBtn) viewMoreBtn.parentElement.style.display = 'none';
+        function loadMoreProjects() {
+            const allProjects = PORTFOLIO_DATA.projects;
+            const nextBatch = allProjects.slice(currentProjectIndex, currentProjectIndex + PROJECTS_PER_PAGE);
+
+            renderProjectBatch(nextBatch);
+            currentProjectIndex += PROJECTS_PER_PAGE;
+
+            // Hide button if no more projects
+            if (currentProjectIndex >= allProjects.length) {
+                const viewMoreContainer = document.getElementById('view-more-container');
+                if (viewMoreContainer) {
+                    viewMoreContainer.style.display = 'none';
+                }
             }
+        }
 
-            if (viewMoreBtn) {
-                viewMoreBtn.addEventListener('click', function () {
-                    if (currentVisible < projects.length) {
-                        // Logic to show more
-                        let revealed = 0;
-                        for (let i = currentVisible; i < projects.length && revealed < projectsPerBatch; i++) {
-                            projects[i].classList.remove('hidden-project');
-                            revealed++;
-                        }
-                        currentVisible += revealed;
+        // Initialize dynamically loaded content
+        function loadPortfolioContent() {
+            // Initial render of first batch of projects
+            loadMoreProjects();
 
-                        // If all are shown, change button to "Show Less"
-                        if (currentVisible >= projects.length) {
-                            viewMoreBtn.innerHTML = 'Show Less <i class="fa-solid fa-chevron-up ms-2"></i>';
-                        }
-                    } else {
-                        // Logic to show less
-                        projects.forEach((project, index) => {
-                            if (index >= projectsPerBatch) {
-                                project.classList.add('hidden-project');
-                            }
-                        });
-                        currentVisible = projectsPerBatch;
-                        viewMoreBtn.innerHTML = 'View More Projects <i class="fa-solid fa-chevron-down ms-2"></i>';
-
-                        // Smooth scroll back to top of projects section
-                        const projectSection = document.getElementById('Project');
-                        if (projectSection) {
-                            window.scrollTo({
-                                top: projectSection.offsetTop,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-
-                    // Refresh AOS to detect visibility changes
-                    if (typeof AOS !== 'undefined') {
-                        AOS.refresh();
-                    }
+            // Render Timeline
+            const timelineContainer = document.getElementById('timeline-container');
+            if (timelineContainer && PORTFOLIO_DATA.timeline) {
+                PORTFOLIO_DATA.timeline.forEach(item => {
+                    timelineContainer.innerHTML += `
+                        <div class="timeline-item ${item.side}" data-aos="${item.aos}">
+                            <div class="timeline-content">
+                                <div class="cert-image"><img src="${item.image}" alt="${item.title}"></div>
+                                <div class="cert-text">
+                                    <span class="cert-year">${item.year}</span>
+                                    <h3>${item.title}</h3>
+                                    <p>${item.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
                 });
             }
 
-            // Active link highlighting on scroll
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            AOS.refresh();
+        }
 
-            function highlightNavLink() {
-                let scrollY = window.pageYOffset;
-
-                sections.forEach(current => {
-                    const sectionHeight = current.offsetHeight;
-                    const sectionTop = current.offsetTop - 150;
-                    const sectionId = current.getAttribute('id');
-
-                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === '#' + sectionId) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', highlightNavLink);
-            highlightNavLink(); // Initial call
-        });
+        // Call initializer
+        loadPortfolioContent();
     </script>
+
+
+
+
+
 </body>
 
 </html>
