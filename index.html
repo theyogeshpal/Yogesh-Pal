@@ -55,7 +55,7 @@
         }
 
         #main-content {
-            opacity: 0;
+            opacity: 1;
             transition: opacity 0.8s ease;
         }
 
@@ -2354,6 +2354,8 @@
             justify-content: center;
             align-items: center;
             transition: opacity 0.6s ease, visibility 0.6s;
+            opacity: 0;
+            visibility: hidden;
         }
 
         .loader-content {
@@ -2438,6 +2440,10 @@
         #loader-wrapper.loaded {
             opacity: 0;
             visibility: hidden;
+        }
+        #loader-wrapper.visible {
+            opacity: 1;
+            visibility: visible;
         }
     </style>
     <link rel="stylesheet" href="https://www.ilcorrieredellacitta.com/wp-content/uploads/2023/06/whatapp-1-fb.png"
@@ -3078,15 +3084,28 @@
     <script>
         let PORTFOLIO_DATA = null;
         const BACKEND_URL = 'https://portfolio-backend-95gv.onrender.com';
+        let loaderTimer = null;
+
+        function showLoader() {
+            document.getElementById('loader-wrapper').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+        function hideLoader() {
+            if (loaderTimer) clearTimeout(loaderTimer);
+            document.getElementById('loader-wrapper').classList.add('loaded');
+            document.getElementById('main-content').style.opacity = '1';
+            document.body.style.overflow = 'auto';
+        }
 
         function getImageUrl(url) {
             if (!url) return '';
-            if (url.startsWith('http')) return url;
+            if (url.startsWith('http')) return url.replace(/^http:/, 'https:');
             return url;
         }
 
         async function initPortfolio() {
-            document.body.style.overflow = 'hidden';
+            // Show loader only if API takes more than 3 seconds
+            loaderTimer = setTimeout(showLoader, 3000);
             try {
                 const response = await fetch(`${BACKEND_URL}/api/portfolio-data`);
                 PORTFOLIO_DATA = await response.json();
@@ -3128,14 +3147,10 @@
                 loadPortfolioContent();
                 AOS.init({ duration: 800, once: true, offset: 40 });
 
-                // Hide Loader
-                setTimeout(() => {
-                    document.getElementById('loader-wrapper').classList.add('loaded');
-                    document.getElementById('main-content').style.opacity = '1';
-                    document.body.style.overflow = 'auto';
-                }, 500);
+                hideLoader();
             } catch (err) {
                 console.error('API Error:', err);
+                hideLoader();
             }
         }
 
