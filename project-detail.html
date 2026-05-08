@@ -24,6 +24,8 @@
             justify-content: center;
             align-items: center;
             transition: opacity 0.6s ease, visibility 0.6s;
+            opacity: 0;
+            visibility: hidden;
         }
 
         .loader-content {
@@ -92,6 +94,10 @@
         #loader-wrapper.loaded {
             opacity: 0;
             visibility: hidden;
+        }
+        #loader-wrapper.visible {
+            opacity: 1;
+            visibility: visible;
         }
 
         :root {
@@ -632,6 +638,18 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         const BACKEND_URL = 'https://portfolio-backend-95gv.onrender.com';
+        let loaderTimer = null;
+
+        function showLoader() {
+            document.getElementById('loader-wrapper').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+        function hideLoader() {
+            if (loaderTimer) clearTimeout(loaderTimer);
+            document.getElementById('loader-wrapper').classList.remove('visible');
+            document.getElementById('loader-wrapper').classList.add('loaded');
+            document.body.style.overflow = 'auto';
+        }
 
         function getImageUrl(url) {
             if (!url) return '';
@@ -645,7 +663,7 @@
         const projectId = urlParams.get('id');
 
         async function loadProject() {
-            document.body.style.overflow = 'hidden';
+            loaderTimer = setTimeout(showLoader, 3000);
             if (!projectId) {
                 window.location.href = 'index.html';
                 return;
@@ -689,14 +707,10 @@
                 }
 
                 updateStats(project);
-
-                // Hide Loader
-                setTimeout(() => {
-                    document.getElementById('loader-wrapper').classList.add('loaded');
-                    document.body.style.overflow = 'auto';
-                }, 500);
+                hideLoader();
             } catch (err) {
                 console.error('Error fetching project:', err);
+                hideLoader();
             }
         }
 
