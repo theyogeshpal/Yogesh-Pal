@@ -50,7 +50,7 @@
             background-color: rgb(255, 255, 255);
             font-family: 'Roboto Mono', monospace;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
             width: 100%;
         }
 
@@ -3140,8 +3140,8 @@
                         <p>${p.para2 || ''}</p>
                         <p>${p.para3 || ''}</p>
                     `;
-                    document.getElementById('about-img-1').src = getImageUrl(p.images[0]);
-                    document.getElementById('about-img-2').src = getImageUrl(p.images[1]);
+                    if (p.images && p.images[0]) document.getElementById('about-img-1').src = getImageUrl(p.images[0]);
+                    if (p.images && p.images[1]) document.getElementById('about-img-2').src = getImageUrl(p.images[1]);
                 }
 
                 loadPortfolioContent();
@@ -3206,12 +3206,12 @@
             const experienceContainer = document.getElementById('experience-container');
             if (experienceContainer && PORTFOLIO_DATA.experience) {
                 PORTFOLIO_DATA.experience.forEach(exp => {
-                    const techs = Array.isArray(exp.technologies) ? exp.technologies : exp.technologies.split(',');
+                    const techs = Array.isArray(exp.technologies) ? exp.technologies : (exp.technologies || '').split(',');
                     const techBadges = techs.map(tech => `<span class="experience-tech-badge">${tech}</span>`).join('');
                     experienceContainer.innerHTML += `
                         <div class="experience-card" data-aos="fade-up" onclick="openExperienceModal('${exp._id}')" style="cursor: pointer;">
                             <div class="experience-image" >
-                                <img src="${getImageUrl(exp.images[0])}" alt="${exp.company}">
+                                <img src="${getImageUrl(exp.images && exp.images[0])}" alt="${exp.company || ''}">
                             </div>
                             <div class="experience-content">
                                 <div class="experience-header">
@@ -3350,6 +3350,15 @@
             else backToTop?.classList.remove('show');
         });
         function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        function viewLessProjects() {
+            currentProjectIndex = PROJECTS_PER_PAGE;
+            document.getElementById('projects-grid').innerHTML = '';
+            renderProjectBatch(PORTFOLIO_DATA.projects.slice(0, PROJECTS_PER_PAGE));
+            document.getElementById('view-more-btn').style.display = 'inline-flex';
+            document.getElementById('view-less-btn').style.display = 'none';
+            document.getElementById('view-more-container').style.display = 'block';
+        }
     </script>
 
 
