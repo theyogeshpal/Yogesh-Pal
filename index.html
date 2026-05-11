@@ -3236,7 +3236,7 @@
             if (timelineContainer && PORTFOLIO_DATA.timeline) {
                 PORTFOLIO_DATA.timeline.forEach(item => {
                     timelineContainer.innerHTML += `
-                        <div class="timeline-item ${item.side || 'left'}" data-aos="${item.aos || 'fade-up'}">
+                        <div class="timeline-item ${item.side || 'right'}" data-aos="${item.aos || 'fade-up'}">
                             <div class="timeline-content">
                                 <div class="cert-image"><img src="${getImageUrl(item.image)}" alt="${item.title}"></div>
                                 <div class="cert-text">
